@@ -1,0 +1,918 @@
+
+<!doctype html>
+
+
+
+
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
+		<link rel="shortcut icon" ico/아이콘.ico">
+		<img src="images/로고.png" width="0" height="0">
+		<title>Team Ako</title>
+		<meta name="description" content="Tecko의 pc견적 소개">
+		<meta property="og:description" content="Alphago 사이트">
+
+		  <script>
+			$(document).ready(function(){
+			$(".btn_top").on("click",function(){
+			$("html,body").animate({"scrollTop":0},800);
+			});
+			});
+		</script>
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		<script src="js/jssor.slider-27.4.0.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+
+
+				var jssor_1_options = {
+				  $AutoPlay: 1,
+				  $SlideshowOptions: {
+					$Class: $JssorSlideshowRunner$,
+					$Transitions: jssor_1_SlideshowTransitions,
+					$TransitionsOrder: 1
+				  },
+				  $ArrowNavigatorOptions: {
+					$Class: $JssorArrowNavigator$
+				  },
+				  $BulletNavigatorOptions: {
+					$Class: $JssorBulletNavigator$
+				  }
+				};
+
+				var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+				var MAX_WIDTH = 980;
+
+				function ScaleSlider() {
+					var containerElement = jssor_1_slider.$Elmt.parentNode;
+					var containerWidth = containerElement.clientWidth;
+
+					if (containerWidth) {
+
+						var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+						jssor_1_slider.$ScaleWidth(expectedWidth);
+					}
+					else {
+						window.setTimeout(ScaleSlider, 30);
+					}
+				}
+
+				ScaleSlider();
+
+				$(window).bind("load", ScaleSlider);
+				$(window).bind("resize", ScaleSlider);
+				$(window).bind("orientationchange", ScaleSlider);
+				/*#endregion responsive code end*/
+			});
+		</script>
+		<script>
+			  $(document).ready(function(){
+					$(".btn_down").on("click",function(){
+					   $("html,body").animate({"scrollTop":3500},800);
+					});
+
+				 });
+		</script>
+		<style type="text/css">
+			div.box_wrap{overflow:hidden;}
+			div.box_wrap div.box{float:left; border: 1px solid #000; background: #gray; width: 360px; height: 400px;}
+		</style>
+		<script language="Javascript">
+			<!--
+			function setCookie( name, value, expiredays ) {
+			var todayDate = new Date();
+				todayDate.setDate( todayDate.getDate() + expiredays );
+				document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+			}
+			function closeWin() {
+			if ( document.notice_form.chkbox.checked ){
+				setCookie( "maindiv", "done" , 1 );
+			}
+			document.all['divpop'].style.visibility = "hidden";
+			}
+			//-->
+		</script>
+
+			<!--팝업-->
+
+			<div id="divpop" style="position:absolute;left:300px;top:190px;z-index:200;visibility:hidden;">
+				<table width=350 height=350 cellpadding=2 cellspacing=0>
+				<tr>
+					<td style="border:1px #666666 solid" height=360 align=center bgcolor="#2e3138">
+						<img src="팝업.png" alt="팝업1">
+					</td>
+				</tr>
+				<tr>
+					<form name="notice_form">
+					<td align=center bgcolor=#000">
+						<input type="checkbox" name="chkbox" value="checkbox"><font color="#FFFFFF">오늘 하루 이 창을 열지 않음</font>
+						<a href="javascript:closeWin();"><B><font color="#FFFFFF">[닫기]</font> </B></a>
+					</td>
+				</tr>
+					</form>
+				</table>
+			</div>
+				<script language="Javascript">
+				cookiedata = document.cookie;
+				if ( cookiedata.indexOf("maindiv=done") < 0 ){
+					document.all['divpop'].style.visibility = "visible";
+					}
+					else {
+						document.all['divpop'].style.visibility = "hidden";
+				}
+				</script>
+				<style>
+					/*jssor slider loading skin spin css*/
+					.jssorl-009-spin img {
+						animation-name: jssorl-009-spin;
+						animation-duration: 1.6s;
+						animation-iteration-count: infinite;
+						animation-timing-function: linear;
+					}
+
+					@keyframes jssorl-009-spin {
+						from { transform: rotate(0deg); }
+						to { transform: rotate(360deg); }
+					}
+
+
+					/*jssor slider arrow skin 051 css*/
+					.jssora051 {display:block;position:absolute;cursor:pointer;}
+					.jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
+					.jssora051:hover {opacity:.8;}
+					.jssora051.jssora051dn {opacity:.5;}
+					.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
+				</style>
+	</head>
+	<body>
+
+		<style>
+			.btn_top{
+				display:inline-block;
+				width:35px;
+				height:35px;
+				text-align:center;
+				line-height:35px;
+				background-color:rgba(0,0,0,0.7);
+				color:#fff;
+				position:fixed;
+				right:10px;
+				bottom:70px;
+			   }
+				.btn_down{
+				display:inline-block;
+				width:35px;
+				height:35px;
+				text-align:center;
+				line-height:35px;
+				background-color:rgba(0,0,0,0.7);
+				color:#fff;
+				position:fixed;
+				right:10px;
+				bottom:30px;
+				}
+			/* 헤더영역 스타일 */
+			.header{
+				background-image:url(./img/bg_header.gif);
+			}
+
+			.header_inner{
+
+				border:0px solid blue;
+				width:980px;
+				margin:0 auto;
+				height:100px;
+				position:relative;
+			}
+			.util{
+				position:absolute;
+				right:0;
+				top:18px;
+			}
+			.logo{
+				position:absolute;
+				left:0;
+				top:18px;
+				overflow:hidden;
+			}
+			.util > li{
+				float:left;
+				padding:0 8px;
+				background-image:url(./img/bl_util_bar.gif);
+				background-repeat:no-repeat;
+				background-position:right 3px;
+			}
+
+			.util > li:last-child{
+				background-image:none;
+				padding-right: 0;
+			}
+			.util > li > a{
+				color:#000;
+				text-decoration:none;
+			}
+			.gnb{
+				border:0px solid red;
+				overflow:hidden;
+				position:absolute;
+				top:55px;
+				left:175px;
+			}
+			.gnb > li{
+				padding-right:45px;
+				float:left;
+			}
+			.gnb > li:last-child{
+				padding-right:0;
+			}
+			.gnb > li > a{
+				font-size:20px;
+				color:#000;
+				text-decoration:none;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				outline: 0;
+				box-sizing: border-box;
+			}
+
+	html,
+			body {
+				width: 100%;
+				height: 100%;
+				font-family: 'Nanum Gothic', Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;
+				color: #333;
+			}
+
+			h1{
+				font-weight: normal;
+				margin-bottom: 2rem;
+			}
+
+			a {
+				text-decoration: none;
+				color: #444;
+			}
+
+			.wrapper {
+				margin: 2rem auto 0;
+				width: 90%;
+			}
+
+			.wrapper a {
+				color: #4687c9;
+			}
+
+			.howto-wrap {}
+			.howto-wrap h3.sub-title {
+				font-size: 1.5rem;
+				color: #333;
+				line-height: 1.5;
+				border-bottom:1px solid #666;
+			}
+
+			.howto-wrap p.desc {
+				font-size: 1.125rem;
+				color: #444;
+				line-height: 2;
+				margin-bottom: 1rem;
+			}
+
+			.howto-exam {
+				margin-top: 1.25rem;
+			}
+
+			.mt1 {
+				margin-top: 1rem;
+			}
+
+			.mt4 {
+				margin-top: 4rem;
+			}
+
+/* 예제 스타일링 */
+
+			.row {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+
+			.row:before,
+
+			.row:after {
+				content: '';
+				display: block;
+				height: 0;
+				clear: both;
+			}
+
+			.card {
+				float: left;
+				width: 23%;
+				margin-right: 2%;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+			}
+
+			.row .card:nth-child(2) {
+				margin-right: 4%
+			}
+
+			.row .card:last-child {
+				margin-right: 0;
+			}
+
+			.card .card-img img {
+				width: 100%;
+			}
+
+			.card .card-cont {
+				position: relative;
+				padding: 10px;
+				background-color: #fff;
+			}
+
+			.card-cont .card-title {
+				display: block;
+				text-align: center;
+				padding-bottom: 1rem;
+				font-size: 1.2rem;
+				font-weight: 500;
+				color: #262626;
+			}
+
+				.card-cont .card-desc {
+					text-align: center;
+					font-size: 0.875em;
+					padding-bottom: 1rem;
+				}
+
+				.card-price {
+					overflow: hidden;
+				}
+
+				.card-price span {
+					display: inline-block;
+					font-size: 0.875rem;
+					padding: 5px;
+				}
+
+				.card-price span:first-child {
+					padding-right: 1em;
+				}
+
+				.card-price span:nth-child(2) {}
+
+				.card-price span:nth-child(2):before {
+					content: '￦';
+					display: inline-block;
+				}
+
+				.card-price button {
+					position: absolute;
+					bottom: 10px;
+					right: 10px;
+					outline: 0;
+					border: 0;
+					font-size: 0.75em;
+					background-color: #ddd;
+					padding: 5px 10px;
+					color: #444;
+					border-radius: 4px;
+					cursor: pointer;
+					transition: 0.3s;
+				}
+
+				.card-price button:hover {
+					background-color: #aaa;
+					color: #fff;
+				}
+				.active {
+					background-color: lightblue;
+					color: black;
+					font-family: "Malgun Gothic","맑은 고딕";
+				}
+				#device {
+					display:block;
+					margin:0.3em;
+					height: 50px;
+					padding:0.5em 0;
+					font-family: "Malgun Gothic","맑은 고딕";
+					border:1px solid #eee;
+					border-radius: 0.5em;
+					background:#fff;
+					color:#000;
+					font-size:1.5em;
+					text-decoration:none;
+					text-align:center;
+				}
+				#button {
+					display:inline-block;
+					margin:0;
+					padding:7px;
+					border:1px solid #3b3c3f;
+					background:#4b545e;
+					color:#fff;
+					text-decoration:none
+				}
+				#direct_title {
+					display: inline-block;
+					font-size: 22px;
+					font-weight: bold;
+					letter-spacing: -0.025em;
+					color: #000;
+					font-family: "Malgun Gothic","맑은 고딕";
+				}
+				#button2{
+					display:inline-block;
+					border-radius: 4px;
+					font-size: 0.75em;
+					padding:5px 10px;
+					background-color:#fff;
+					color:#333;
+					border:1px solid #333;
+				}
+				#button2:hover{
+					display:inline-block;
+					border-radius: 4px;
+					font-size: 0.75em;
+					padding:5px 10px;
+					transition:background 1.0s;
+					background-color:#333;
+					color:#fff;
+				}
+				.btn_top{
+					display:inline-block;
+					width:35px;
+					height:35px;
+					text-align:center;
+					line-height:35px;
+					background-color:rgba(0,0,0,0.7);
+					color:#fff;
+					position:fixed;
+					right:10px;
+					bottom:70px;
+				}
+				.btn_down{
+					display:inline-block;
+					width:35px;
+					height:35px;
+					text-align:center;
+					line-height:35px;
+					background-color:rgba(0,0,0,0.7);
+					color:#fff;
+					position:fixed;
+					right:10px;
+					bottom:30px;
+			   }
+				/*jssor slider bullet skin 051 css*/
+				.jssorb051 .i {position:absolute;cursor:pointer;}
+				.jssorb051 .i .b {fill:#fff;fill-opacity:0.5;}
+				.jssorb051 .i:hover .b {fill-opacity:.7;}
+				.jssorb051 .iav .b {fill-opacity: 1;}
+				.jssorb051 .i.idn {opacity:.3;}
+
+		</style>
+		<!--[헤더 영역]-->
+		<div>
+		<div class="header">
+			<div class="header_inner">
+				<h1 class="logo">
+					<img src="images/로고.png">
+				</h1>
+
+				<ul class="util">
+					<li><a href="http://shop.danawa.com/main/">다나와 사이트로 이동</a></li>
+					<li><a href="http://shop.danawa.com/shopmain/?_IC_=auction_shop_top">다나와 조립PC사이트로 이동</a></li>
+					<li><a href="http://shop.danawa.com/virtualestimate/?controller=estimateMain&methods=index&marketPlaceSeq=16&_IC_=esti_shop_top">다나와 PC견적맞추기 사이트로 이동</a></li>
+					<li><a href="main page.html">Tecko의 메인페이지로 이동</a></li>
+					<li><a href="#"></a></li>
+				</ul>
+
+				<!--메뉴-->
+				<ul class="gnb">
+				<li><a href="#">개발중입니다</a></li>
+				<li><a href="#">개발중입니다</a></li>
+				<li><a href="#">개발중입니다</a></li>
+				<li><a href="#">개발중입니다</a></li>
+				<li><a href="#">개발중입니다</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+		<style>
+		.banner{
+		}
+		</style>
+		<div class="banner">
+
+		</div>
+		<br>
+		<!--억지로 시작 -->
+		<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:0px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+			<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+				<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+			</div>
+			<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+				<div>
+					<img data-u="image" src="img/001.jpg" />
+				</div>
+				<div>
+					<img data-u="image" src="img/002.jpg" />
+				</div>
+				<div>
+					<img data-u="image" src="img/003.jpg" />
+				</div>
+				<div>
+					<img data-u="image" src="img/004.jpg" />
+				</div>
+				<div>
+					<img data-u="image" src="img/005.jpg" />
+				</div>
+				<div>
+					<img data-u="image" src="img/006.jpg" />
+				</div>
+				<div>
+					<img data-u="image" src="img/007.jpg" />
+				</div>
+				<div>
+					<img data-u="image" src="img/008.jpg" />
+				</div>
+				<div>
+					<img data-u="image" src="img/009.jpg" />
+				</div>
+			</div>
+			<!-- Bullet Navigator -->
+			<div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+				<div data-u="prototype" class="i" style="width:16px;height:16px;">
+					<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+						<circle class="b" cx="8000" cy="8000" r="5800"></circle>
+					</svg>
+				</div>
+			</div>
+			<!-- Arrow Navigator -->
+			<div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+				<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+					<polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+				</svg>
+			</div>
+			<div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+				<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+					<polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+				</svg>
+			</div>
+		</div>
+		<!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:16px;height:16px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+		<div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+    <!-- #endregion Jssor Slider End -->
+    </div>
+	<center>
+	<div class="wrapper">
+	<div class="howto-wrap">
+		<img src="Team Ako로고.png">
+    <h3 class="sub-title">Intel CPU</h3>
+    <p class="desc"></p>
+    <!-- 예제 부분 -->
+		<!--인텔 pc견적 -->
+    <div class="howto-exam">
+      <div class="row">
+        <div class="card">
+          <div class="card-img">
+            <img src="images/30pc.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">30만원대 사무용 PC</a>
+            <p class="card-desc">
+              인텔 펜티엄 골드 G5400 / H310M / DDR4 4GB / 120GB SSD / 1TB HDD / 조립비 미포함
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>334,210 원 </span>
+              <br/>
+			  <a href="http://shop.danawa.com/virtualestimate/?controller=estimateMain&methods=index&marketPlaceSeq=16&shareYN=Y&productSeqList=6057483,6034833,5163718,4279607,1706996,4088685,4712037&quantityList=1,1,1,1,1,1,1" id="button2">PC보기</a>
+			  <a href="http://micro.danawa.com/product/wishList?productSeq=6057483,6034833,5163718,4279607,1706996,4088685,4712037&count=1,1,1,1,1,1,1" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/White pc no.1.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">120만원대 화이트 게이밍 PC</a>
+            <p class="card-desc">
+              I5-8400/ Antec DDR4 8GB 2ea/ SSD 256GB/ 600W/ 조립비 미포함
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>1,202,840</span>
+              <br/>
+			  <a href="http://shop.danawa.com/virtualestimate/?controller=estimateMain&methods=index&marketPlaceSeq=16&shareYN=Y&productSeqList=5614305,6013275,5970874,6231450,5830192,1706996,4742541,1928750,6060457,5386113&quantityList=1,1,2,1,1,1,1,1,1,1" id="button2">PC보기</a>
+			  <a href="http://micro.danawa.com/product/wishList?productSeq=5614305,6013275,5970874,6231450,5830192,1706996,4742541,1928750,6060457,5386113&count=1,1,2,1,1,1,1,1,1,1" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //예제 부분 -->
+  </div>
+</div>
+<div class="wrapper">
+    <div class="howto-wrap">
+    <h3 class="sub-title">Ryzen CPU</h3>
+    <p class="desc"></p>
+    <!-- 예제 부분 -->
+    <div class="howto-exam">
+      <div class="row">
+        <div class="card">
+          <div class="card-img">
+            <img src="images/60pc.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">60만원대 게임용 PC</a>
+            <p class="card-desc">
+              1300X / GTX1050 2GB / A320M / 8G / SSD 128GB / HDD 1TB / 500W / 조립비포함
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>685,070</span>
+              <br/>
+							<!-- 라이젠 pc견적-->
+			  <a href="http://shop.danawa.com/virtualestimate/?controller=estimateMain&methods=index&marketPlaceSeq=16&sharedId=N568180623&folderSeq=16317928&sharedSns=Y&productSeqList=5352169,5055081,5076512,4597669,4401948,1706996,5673851,5181387,3415638&quantityList=1,1,1,1,1,1,1,1,1" id="button2">PC보기</a>
+			  <a href="http://micro.danawa.com/product/wishList?productSeq=5352169,5055081,5076512,4597669,4401948,1706996,5673851,5181387,3415638&count=1,1,1,1,1,1,1,1,1" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="images/test.jpg" alt="이미지부분">
+          </div>
+          <div class="card-cont">
+            <a href="#" class="card-title">제목 부분</a>
+            <p class="card-desc">
+              부가 설명 부분 입니다.
+            </p>
+            <div class="card-price">
+              <span>가격 </span>
+              <span>100</span>
+              <br/>
+			  <a href="pages/test.html" id="button2">PC보기</a>
+			  <a href="pages/test.html" id="button2">모바일보기</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //예제 부분 -->
+  </div>
+	<a href="http://javice.kr/mobile/mobile.html" id="device">모바일 버전으로 보기</a>
+</div>
+<img src="http://c.tion.kr/p.png?id=javice&amp;num=20151120110701" width="0" height="0">
+
+	<!--업톱 다운톱 버튼-->
+	</body>
+</html>
